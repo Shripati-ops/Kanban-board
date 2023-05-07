@@ -1,15 +1,16 @@
 import React, { useEffect, useRef } from "react"
 import { useNavigate } from "react-router-dom"
-const protectedRoutes = (props:any)=> {
+const ProtectedRoutes = (props:any)=> {
     const isLoggedIn = useRef(false);
     const router = useNavigate();
     const checkIfUserIsLoggedIn = () => {
-        if(localStorage.getItem('token') != null){
+        console.log(localStorage.getItem('tokens'))
+        if(localStorage.getItem('tokens') != null){
             isLoggedIn.current = true;  
         }
         else{
             isLoggedIn.current = false;
-            return router("/login");
+            return router("/auth/login");
         }
     }
 
@@ -25,4 +26,4 @@ const protectedRoutes = (props:any)=> {
 
 }
 
-export default protectedRoutes
+export default ProtectedRoutes

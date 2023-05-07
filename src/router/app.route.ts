@@ -4,6 +4,7 @@ export const app = [
     {
         path : "kanban-board",
         component : kanbanBoard,
-        exact : true
+        exact : true,
+        requiresAuthentication : true
     }
 ]

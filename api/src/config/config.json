@@ -1,0 +1,6 @@
+{
+    "mongooseURL" : {
+        "serverURL" : "mongodb://localhost:27017",
+        "database" : "kanban"
+    }
+}
